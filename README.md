@@ -1,4 +1,4 @@
-# 14MBID_Code Project
+# 14MBID_Code
 
 El proyecto `14MBID_Code` se organiza en cinco carpetas principales, cada una con su respectiva función y contenido:
 

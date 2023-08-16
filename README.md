@@ -44,3 +44,22 @@ key: UID:API_KEY
 
 Si surgen dificultades al generar la API Key, es posible recurrir al archivo .cdsapirc proporcionado en la carpeta env del proyecto. El archivo contiene la información de la API Key asociada a mi perfil.
 
+## Ejecución del Flujo de Trabajo
+
+Para ejecutar el flujo de carga, se debe utilizar el siguiente comando en la línea de comandos:
+
+```makefile
+python ./src/reanalysis_cerra_module.py [descarga] [provincia]
+```
+
+Donde los parámetros de ejecución son:
+
+- **descarga**: Este parámetro es un booleano (0 o 1) que indica si se desea lanzar la descarga de datos a partir de la API de CERRA. Por defecto, la descarga no está habilitada (0). La descarga de datos se realiza para ficheros de tamaño 1, 2, 4, 8, 16, 32, 64 GB respectivamente.
+- **provincia**: Este parámetro es opcional y se utiliza para especificar la provincia de referencia (AOI). Por defecto, se seleccionan todas las provincias. Si se desea seleccionar una provincia concreta, por ejemplo, Valencia, se debe especificar el nombre de la provincia en este parámetro, como `València/Valencia`.
+
+Por ejemplo, para ejecutar el flujo de carga con descarga de datos habilitada y seleccionando la provincia de Valencia, se debe utilizar el siguiente comando:
+
+```makefile
+python ./src/reanalysis_cerra_module.py 1 València/Valencia
+```
+
